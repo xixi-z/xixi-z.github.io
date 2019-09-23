@@ -1,9 +1,19 @@
 <html>
 <body>
-<h1>我叫谢炳赖</h1>
-    <p>我的学号是<span id="studentnumber">2012020045</span>
+<h1>我叫<span id="myname"></span></h1>
+    <p>我的学号是<span id="mynumber"></span>
     </p>
     <img src="matrix.png" />
     <img src="timg8EZ2L825.jpg" id="logo">
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $.get("./nakd.json",function(result){
+                $("#myname").text(result.myname);
+                $("#mynumber").text(result.mynumber);
+            })
+        })
+    </script>
+
 </body>
 </html>
